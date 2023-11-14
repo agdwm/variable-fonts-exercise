@@ -1,15 +1,29 @@
 * {
   box-sizing: border-box;
-  font-family: sans-serif;
 }
 
 html {
+  --color-white: hsl(0, 0%, 100%);
   --color-gray-100: hsl(270deg 25% 96%);
   --color-gray-300: hsl(270deg 17% 84%);
   --color-gray-500: hsl(270deg 17% 72%);
   --color-gray-700: hsl(270deg 12% 58%);
   --color-gray-900: hsl(270deg 22% 12%);
   --color-gray-1000: hsl(270deg 20% 8%);
+
+  --font-sans-serif:
+    -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+    helvetica neue, helvetica, Ubuntu, roboto, noto, arial, sans-serif;
+
+  --weight-thin: 100;
+  --weight-extra-light: 200;
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extra-bold: 800;
+  --weight-black: 900;
 }
 
 html,
@@ -17,6 +31,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+body {
+  font-family: "Raleway", var(--font-sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -45,11 +64,26 @@ footer {
 
 .logo {
   font-size: 2rem;
+  font-weight: var(--weight-black);
   margin-bottom: 16px;
+  color: var(--color-white);
+}
+
+.sublogo {
+  font-weight: var(--weight-medium);
+  font-style: italic;
+  color: var(--color-gray-500);
+}
+
+.person-name{
+  color: var(--color-gray-300);
+  font-weight: var(--weight-bold);
 }
 
 .legal {
   margin-top: auto;
+  font-weight: var(--weight-regular);
+  color: var(--color-gray-700);
 }
 
 .links {
@@ -61,6 +95,8 @@ footer {
   margin-bottom: 24px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  color: var(--color-gray-700);
 }
 
 .links li {
@@ -73,6 +109,8 @@ footer {
 
 .links a {
   text-decoration: none;
+  font-weight: var(--weight-medium);
+  color: var(--color-gray-100);
 }
 
 main {
